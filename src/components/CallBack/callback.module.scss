@@ -1,0 +1,54 @@
+@import '@styles/variables.scss';
+
+.callback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    min-width: 152px;
+
+    &--right {
+        @extend .callback;
+        align-items: flex-end;
+    }
+}
+
+.text {
+    &--bold {
+        font-size: 14px;
+        font-weight: 600;
+        color: $dark-font-color;
+
+        &--light {
+            @extend .text--bold;
+            color: $light-color;
+        }
+    }
+
+    &--small {
+        font-size: 12px;
+        font-weight: 300;
+        color: $light-dark-font-color;
+
+        &--light {
+            @extend .text--small;
+            color: $light-color;
+        }
+    }
+
+    &--underlined  {
+        font-size: 10px;
+        font-weight: 400;
+        color: $light-dark-font-color;
+        text-decoration: underline;
+
+        &--light {
+            @extend .text--underlined;
+            color: $light-color;
+        }
+    } 
+}
+
+.link {
+    display: flex;
+}

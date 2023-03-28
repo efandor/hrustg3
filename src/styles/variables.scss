@@ -1,0 +1,19 @@
+$dark-color: #000000;
+$light-color: #ffffff;
+$accent-color: #FFC85E;
+$light-gray-color: #EDEDED;
+$light-dark-font-color: #3f4e65;
+$light-gray-font-color: #5C6370;
+$dark-font-color: #111111;
+$light-dark-border-color: rgba(63, 78, 101, 0.1);
+$container-size: 1366px;
+$xxs: 315px;
+$xs: 800px;
+$s: 1000px;
+$m: 1365px;
+
+@mixin adapt($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,34 @@
+@import '@styles/variables.scss';
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    $h: 60px;
+    height: $h;
+    max-width: 200px;
+    min-width: max-content;
+    padding: 21px 54px;
+    background-color: $accent-color;
+    border: none;
+    border-radius: calc($h / 2);
+    font-size: 14px;
+    font-weight: 700;
+    color: $light-color;
+    cursor: pointer;
+
+    @include adapt($xs) {
+        height: 40px;
+        width: 149px;
+        padding: 0;
+      }
+}
+
+.text {
+    white-space: nowrap;
+}
+
+.icon {
+    width: 17px;
+}

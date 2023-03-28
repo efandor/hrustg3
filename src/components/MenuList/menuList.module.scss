@@ -1,0 +1,62 @@
+@import '@styles/variables.scss';
+
+.menu {
+  height: 29px;
+
+  &--column {
+    height: unset;
+  }
+}
+
+.list {
+  display: flex;
+  list-style: none;
+
+  &--column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+  }
+}
+
+.item {
+  padding: 0 30px;
+
+  &:not(:last-child) {
+    border-right: 1px dashed $light-dark-border-color;
+  }
+
+  &--column {
+    padding: 0;
+  }
+}
+
+.text {
+  font-size: 14px;
+  line-height: 150%;
+  color: $light-dark-font-color;
+
+  &--light {
+    color: $light-color;
+
+    @include adapt($s) {
+      font-size: 12px;
+    }
+  }
+
+  @include adapt($s) {
+    font-size: 12px;
+  }
+}
+
+.column {
+  .item {
+    padding: 0;
+  
+    &:not(:last-child) {
+      border-right: none;
+    }
+  }
+
+}

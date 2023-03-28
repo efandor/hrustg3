@@ -1,0 +1,50 @@
+@import '@styles/variables.scss';
+
+.addresses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+
+  @include adapt($m) {
+    display: none;
+  }
+}
+
+.address {
+  display: flex;
+  gap: 15px;
+
+  &:not(:last-child) {
+    border-right: 1px dashed $light-dark-border-color;
+    padding-right: 20px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 20px;
+  }
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  line-height: 130%;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 600;
+  color: $dark-font-color;
+
+  &--thin {
+    font-size: 12px;
+    font-weight: 300;
+    color: $light-dark-font-color;
+  }
+}

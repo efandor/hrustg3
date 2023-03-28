@@ -1,0 +1,27 @@
+@import '@styles/variables.scss';
+
+.header-extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid $light-dark-border-color;
+
+    @include adapt($xs) {
+        display: none;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: $container-size;
+    max-width: $container-size;
+
+    @include adapt($m) {
+        justify-content: center;
+        max-width: 95vw;
+    }
+}
